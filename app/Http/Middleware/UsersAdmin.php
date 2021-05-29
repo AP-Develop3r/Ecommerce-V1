@@ -17,18 +17,12 @@ class UsersAdmin
      */
    
 
-    public function handle(Request $request, Closure $next)
-       {
-           switch(auth::user()->type){
-               case ('1'):
-                   return $next($request);//si es administrador continua al  admin.home
-               break;
-               case('2'):
-                   return redirect('client');// si es un cliente redirige a la ruta client.home
-               break;	
-               case ('3'):
-                   return redirect('assistant');//si es assistant redirige al assistant.home
-               break;
+     public function handle(Request $request, Closure $next) {
+            if(Auth::check() && Auth::user()->type =='2'){
+                 return $next($request); // si es un client redirige a la ruta client.home
+              }
+              else {
+               return redirect('/');
            }
-       }
+     }
 }

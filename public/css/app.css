@@ -10941,5 +10941,312 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+.bg-orange {
+  background-color: #fa812f !important;
+}
+.text-orange{
+  color: #fa812f !important; 
+}
+
+.btn-oran {
+  color: #ffffff;
+  background-color: #fa812f;
+  border-color: #fa812f;
+
+  display: inline-block;
+  font-weight: 400;
+ 
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-oran:hover {
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #f88f49;
+  border-color: #f88f49;
+}
+
+.bg-font{
+  background-color: #b68b60 !important;
+}
 
 
+
+
+
+
+
+
+.bg-ruby {
+  background-color: #fa4032 !important;
+}
+.bg-brown{
+  background-color: #804000 !important;
+}
+
+
+.text-brown {
+  color: #804000 !important;
+}
+
+.btn-brown {
+  color: #ffffff;
+  background-color: #804000;
+  border-color: #804000;
+
+  display: inline-block;
+  font-weight: 400;
+ 
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-brown:hover {
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #fa812f;
+
+  border-color: #fa812f;
+}
+
+
+/* Admin */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Toggle Styles */
+
+#viewport {
+  padding-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #37474F;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: #263238;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar header a:hover {
+  color: #fff;
+}
+
+#sidebar .nav a{
+  background: none;
+  border-bottom: 1px solid #455A64;
+  color: #CFD8DC;
+  font-size: 14px;
+  padding: 16px 24px;
+}
+
+#sidebar .nav a:hover{
+  background: none;
+  color: #ECEFF1;
+}
+
+#sidebar .nav a i{
+  margin-right: 16px;
+}
+.bg-blue {
+  background-color: #37474F !important;
+}
+
+.opacity-0 {
+  opacity:0!important;
+}
+.opacity-1 {
+  opacity:0.2!important;
+}
+.opacity-2 {
+  opacity:0.4!important;
+}
+.opacity-3 {
+  opacity:0.6!important;
+}
+.opacity-4 {
+  opacity:.8!important;
+}
+.opacity-5 {
+  opacity:1!important;
+}
+
+/* Maybe even support hover opacity shifts */
+.opacity-0h5 {
+  opacity:0!important;
+  transition: opacity .25s ease-in-out!important;
+  -moz-transition: opacity .25s ease-in-out!important;
+  -webkit-transition: opacity .25s ease-in-out!important;
+}
+.opacity-0h5:hover {
+  opacity:1!important;
+}
+.bg-fondo {
+  background-color: #dab999;
+}
+textarea:focus, input:focus, input[type]:focus {
+  border-color: rgb(255, 144, 0);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+  outline: 0 none;
+}
+
+
+
+.form-control-2 {
+  display: block;
+  width: 85%;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #804000;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #804000;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control-2 {
+    transition: none;
+  }
+}
+
+.form-control-2::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control-2:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #804000;
+}
+
+.form-control-2:focus {
+  color: #804000;
+  background-color: #fff;
+  border-color: #804000;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem  #804000;
+}
+
+.form-control-2::-moz-placeholder {
+  color: #804000;
+  opacity: 1;
+}
+
+.form-control-2:-ms-input-placeholder {
+  color: #804000;
+  opacity: 1;
+}
+
+.form-control-2::placeholder {
+  color: #804000;
+  opacity: 1;
+}
+
+.form-control-2:disabled,
+.form-control-2[readonly] {
+  background-color: #804000;
+  opacity: 1;
+}
+
+input[type=date].form-control-2,
+input[type=time].form-control-2,
+input[type=datetime-local].form-control-2,
+input[type=month].form-control-2 {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select.form-control-2:focus::-ms-value {
+  color: #804000;
+  background-color: #fff;
+}
+
+.zoom img {
+  -webkit-transition:all .9s ease; /* Safari y Chrome */
+  -moz-transition:all .9s ease; /* Firefox */
+  -o-transition:all .9s ease; /* IE 9 */
+  -ms-transition:all .9s ease; /* Opera */
+  width:100%;
+  }
+  .zoom:hover img {
+  -webkit-transform:scale(1.05);
+  -moz-transform:scale(1.05);
+  -ms-transform:scale(1.05);
+  -o-transform:scale(1.05);
+  transform:scale(1.05);
+  }
+  .zoom {/*Ancho y altura son modificables al requerimiento de cada uno*/
+  width:300px;
+  height:180px;
+  overflow:hidden;
+  }
+  #sombra{
+    box-shadow:0px 2px 5px -1px #000000;
+    -moz-box-shadow:0px 2px 5px -1px #000000;
+    -webkit-box-shadow:0px 2px 5px -1px #000000;
+    }

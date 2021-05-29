@@ -11,14 +11,14 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    //     $this->middleware('admin',['only'=> ['index']]);
+    // }
+    public function dashboard()
     {
-        $this->middleware('auth');
-        $this->middleware('usersadmin',['only'=> ['index']]);
-    }
-    public function index()
-    {
-        return view('admin.home');
+        return view('admin.dashboard');
     }
 
     /**

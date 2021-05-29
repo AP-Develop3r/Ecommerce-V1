@@ -2,89 +2,92 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
+use Cart;
+use League\CommonMark\Block\Element\Document;
 
-class ClientController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+class ClientController extends Controller {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('usersclient',['only'=> ['index']]);
+    public function shop() {
+
+        $products = Article::all();
+        return view('client.home', compact('products'));
     }
-    public function index()
-    {
-        return view('client.home');
-    }
+    public function cart() {
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $cart = Article::all();
+        return view('client.cart', compact('cart'));
     }
+    public function add(Request$request){
+        $product = Article::find($request->id);
+        Cart::add(
+            $product->id,
+            $product->name,
+            $product->price,
+            $product->details,
+            $product->quantity,
+            $product->file,
+            array("file"=>$product->file)
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+            // 'id' => $request->id,
+            // 'name' => $request->name,
+            // 'price' => $request->price,
+            // 'quantity' => $request->quantity,
+            // 'attributes' => array(
+            //     'image' => $request->img,
+            //     'slug' => $request->slug
+            );
+        
+        return redirect()->route('client.cart')->with('success_msg', '¡El artículo se agregó al carrito!');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+    public function remove(Request $request){
+        Cart::remove($request->id);
+        return redirect()->route('client.cart')->with('success_msg', '¡El artículo es eliminado!');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    public function update(Request $request){
+        Cart::update($request->id,
+            array(
+                'quantity' => array(
+                    'relative' => false,
+                    'value' => $request->quantity
+                ),
+        ));
+        return redirect()->route('client.cart')->with('success_msg', 'Cart is Updated!');
+    }
+    public function clear(){
+        Cart::clear();
+        return redirect()->route('client.cart')->with('success_msg', '¡El carrito de compras esta vacio!');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+
+    public function order(){ 
+        $cartCollection = Cart::getContent();
+        return view('client.order')->with(['cartCollection' => $cartCollection]);
+        
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+
+
+//evento yape
+
+
+
+
+
+//nosotros
+    public function nosotros(){ 
+        return view('client.nosotros');
     }
+//contacto
+public function contact(){ 
+    return view('client.contact');
+}
+//contacto
+public function pages(){ 
+    return view('client.pages');
+}
+
+
 }
